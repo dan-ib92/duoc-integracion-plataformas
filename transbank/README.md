@@ -13,8 +13,18 @@ Cómo instalar docker:
 
 Como instalar docker y docker compose en windows: https://www.elchecibernetico.com/aplicaciones/instalar-docker-y-docker-compose-en-windows-10
 
+Ademas, se debe crear un archivo llamado `.env` dentro de la carpeta `/tbk-int-back-example` con el siguiente contenido: 
 
-Una vez tengas instalado docker y docker compose, basta con ejecutar el siguiente comando para ejecutar ambas aplicaciones: 
+`````
+TBK_BASE_URL=https://webpay3gint.transbank.cl
+TBK_API_KEY= //copiar API key desde pagina de transbank (codigo de comercio de Webpay Plus)
+TBK_API_SECRET= //copiar secreto desde pagina de transbank (api secret que comienza con 579B....)
+`````
+
+Credenciales de pruebas: https://www.transbankdevelopers.cl/documentacion/como_empezar#codigos-de-comercio
+
+
+Una vez tengas instalado docker, docker compose y las credenciales configuradas; basta con ejecutar el siguiente comando para correr ambas aplicaciones: 
 
 ````bash
 /transbank$ docker-compose up --build
