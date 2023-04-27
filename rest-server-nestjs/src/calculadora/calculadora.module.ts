@@ -1,16 +1,15 @@
 import { Module } from '@nestjs/common';
 import { CalculadoraService } from './calculadora.service';
-import { SoapClientModule } from '../soap-client/soap-client.module';
-import { SoapClientService } from '../soap-client/soap-client.service';
 import { ICalculadoraAdapter } from './calculadora.adapter';
+import { CalculadoraPort } from './calculadora.port';
 
 @Module({
-  imports: [SoapClientModule],
+  imports: [],
   providers: [
     CalculadoraService,
     {
       provide: ICalculadoraAdapter,
-      useClass: SoapClientService,
+      useClass: CalculadoraPort,
     },
   ],
   exports: [CalculadoraService],

@@ -1,7 +1,6 @@
-import { ValidationPipe, Logger } from '@nestjs/common';
+import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-// import { Logger } from 'nestjs-pino';
 import { config } from 'dotenv';
 
 config();
@@ -13,6 +12,9 @@ async function main() {
       disableErrorMessages: false,
     }),
   );
-  await app.listen(3000);
+  app.enableCors({
+    origin: 'http://localhost:4200',
+  });
+  await app.listen(3001);
 }
 main();

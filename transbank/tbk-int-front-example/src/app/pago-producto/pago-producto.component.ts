@@ -38,7 +38,7 @@ export class PagoProductoComponent {
 
   ngOnInit() {
     // Aquí puedes hacer una llamada a tu API REST para obtener la lista de productos
-    this.http.get('http://localhost:3030/listar-productos')
+    this.http.get('http://localhost:3001/listar-productos')
       .subscribe((data: any) => {
         this.productos = data.productos as Producto[];
       });
@@ -62,7 +62,7 @@ export class PagoProductoComponent {
       const body = { idProducto: `${this.productoSeleccionado}` };
       console.log("🚀 - file: app.component.ts:59 - AppComponent - iniciarTransaccion - body:", body);
 
-      this.http.post('http://localhost:3030/comprar-producto', body)
+      this.http.post('http://localhost:3001/comprar-producto', body)
         .subscribe((response: any) => {
           if (response.success) {
             console.log('Transacción exitosa');

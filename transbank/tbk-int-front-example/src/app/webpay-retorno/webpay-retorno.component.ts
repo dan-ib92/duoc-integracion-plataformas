@@ -32,7 +32,7 @@ export class WebpayRetornoComponent implements OnInit {
 
   async checkTransactionResult(token: string) {
     return new Promise((resolve, reject) => {
-      this.http.post('http://localhost:3030/validar-transaccion', { token })
+      this.http.post('http://localhost:3001/validar-transaccion', { token })
       .subscribe((response: any) => {
         resolve(response);
       }, error => {

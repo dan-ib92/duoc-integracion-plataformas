@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     from wsgiref.simple_server import make_server
 
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(level=logging.INFO)
     logging.getLogger('spyne.protocol.xml').setLevel(logging.DEBUG)
 
     port = 8099;

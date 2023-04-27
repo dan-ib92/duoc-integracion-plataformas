@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+    rest-server:
+        container_name: calculadora-rest
+        env_file: ./rest-server-nestjs/.env
+        build:
+            context: ./rest-server-nestjs
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
