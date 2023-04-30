@@ -77,3 +77,9 @@ curl --location 'localhost:3000/dividir' \
     "numeroB": 5
 }'
 ````
+
+
+## Pruebas de API calculadora
+
+Para probar los metodos de API una vez que el servidor rest este corriendo, se debe seguir las instrucciones dentro de la carpeta: /client-api-python. 
+En esta carpeta se encuentra un script que ejecuta llamadas a las distintas APIs. TL:TR: se debe tener instalada la libreria `requests` y python 3 o superior. Desde la carpeta mencionada se debe crear un virtualenv (ver archivo README en dicha carpeta) y luego ejecutar: `python test-api-calculadora.py`
