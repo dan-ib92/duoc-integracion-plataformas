@@ -44,3 +44,4 @@ o
 ````bash
 (env) $ python3 test-api-calculadora.py 
 ````
+{"statusCode":404,"message":"Cannot GET /","error":"Not Found"}
